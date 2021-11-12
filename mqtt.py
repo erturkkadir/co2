@@ -6,7 +6,7 @@ import mysql.connector
 
 
 
-broker = ""
+broker = "**********"
 
 port = 1883
 topic = "capilano/basement/air"
