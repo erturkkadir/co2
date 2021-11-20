@@ -191,7 +191,7 @@ void loop() {
     tft.print(" NH3 : "); tft.print(NH3);
     tft.print(" CO  : "); tft.print(CO);
 
-    sprintf(myData, "[{'myTime':'None'},{'CO2*':%d},{'TVOC*':%d},{'H2*':%d},{'ETH*':%d},{'NO2':%d},{'NH3':%d},{'CO':%d}]", mySensor.CO2, mySensor.TVOC, mySensor.H2, mySensor.ethanol, no2, nh3, co);
+    sprintf(myData, "{'myTime':'None','CO2*':%d,'TVOC*':%d,'H2*':%d,'ETH*':%d,'NO2':%d,'NH3':%d,'CO':%d}", mySensor.CO2, mySensor.TVOC, mySensor.H2, mySensor.ethanol, no2, nh3, co);
     Serial.println(myData);
 
     mqttClient.publish("capilano/basement/air", myData);
